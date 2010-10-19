@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20101019054103) do
     t.string   "telefone"
     t.datetime "data_contratacao"
     t.integer  "salario"
+    t.string   "habilidades"
     t.boolean  "administrador"
   end
 
