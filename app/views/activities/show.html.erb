@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @activity.titulo %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @activity.descricao %>
+</p>
+
+<p>
+  <b>Data inicial:</b>
+  <%= @activity.data_inicial %>
+</p>
+
+<p>
+  <b>Date prev final:</b>
+  <%= @activity.date_prev_final %>
+</p>
+
+<p>
+  <b>Num horas gastas:</b>
+  <%= @activity.num_horas_gastas %>
+</p>
+
+<p>
+  <b>Prioridade:</b>
+  <%= @activity.prioridade %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @activity.tipo %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @activity.project_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @activity.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_activity_path(@activity) %> |
+<%= link_to 'Back', activities_path %>

@@ -1,0 +1,27 @@
+<h1>Atividades</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Data inicial</th>
+    <th>Data prevista final</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @activities.each do |activity| %>
+  <tr>
+    <td><%= activity.titulo %></td>
+    <td><%= activity.data_inicial %></td>
+    <td><%= activity.date_prev_final %></td>
+    <td><%= link_to 'Show', activity %></td>
+    <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
+    <td><%= link_to 'Destroy', activity, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nova Atividade', new_activity_path %>

@@ -1,0 +1,61 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :login %><br />
+    <%= f.text_field :login %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :sexo %><br />
+    <%= f.text_field :sexo %>
+  </div>
+  <div class="field">
+    <%= f.label :data_nascimento %><br />
+    <%= f.datetime_select :data_nascimento %>
+  </div>
+  <div class="field">
+    <%= f.label :endereco %><br />
+    <%= f.text_field :endereco %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone %><br />
+    <%= f.text_field :telefone %>
+  </div>
+  <div class="field">
+    <%= f.label :data_contratacao %><br />
+    <%= f.datetime_select :data_contratacao %>
+  </div>
+  <div class="field">
+    <%= f.label :salario %><br />
+    <%= f.text_field :salario %>
+  </div>
+	<div class="field">
+    <%= f.label :habilidades %><br />
+    <%= f.text_field :habilidades %>
+  </div>
+  <div class="field">
+    <%= f.label :administrador %><br />
+    <%= f.check_box :administrador %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

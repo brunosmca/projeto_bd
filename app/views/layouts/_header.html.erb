@@ -1,0 +1,13 @@
+<header>
+  <% logo = image_tag("logo2.png", :alt => "Sample App", :class => "round") %> <!-- alt = nome se n tiver img -- >
+	<%= link_to logo, root_path %>
+  <nav class="round">
+    <ul>
+      <li><%= link_to "Home", root_path %></li> <!-- # = eh a url por enquanto fica assim-->
+      <li><%= link_to "Projetos", projects_path  %></li>
+      <li><%= link_to "Usuários", users_path %></li>
+			<li><%= link_to "Consultas", '#' %></li>
+			<li><%= link_to "Login", '#' %></li>
+    </ul>
+  </nav>
+</header>
